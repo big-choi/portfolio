@@ -1,45 +1,46 @@
 import { AboutContent, Profile } from '@/lib/types';
 
 export const profile: Profile = {
-  name: '홍길동',
+  name: '최보성',
   role: 'Frontend Developer',
-  tagline: '사용자에게 가장 먼저 닿는 화면을 만드는 프론트엔드 개발자입니다.',
+  tagline: '화면 구현을 넘어 사용자 흐름, 운영 구조, 개발 생산성까지 고려하는 4년차 프론트엔드 개발자입니다.',
   intro:
-    '컴포넌트 설계와 렌더링 최적화, 상태 관리에 관심이 많으며 더 나은 사용자 경험을 만드는 데 집중합니다. React와 Next.js를 주력으로 사용합니다.',
-  email: 'hello@example.com',
+    'React와 TypeScript를 주력으로 사용자 인터페이스를 만드는 프론트엔드 개발자입니다. 컴포넌트 설계와 렌더링 최적화, 상태 관리, 협업을 고려한 코드 구조화에 관심이 많으며, 더 나은 사용자 경험을 만드는 데 집중하고 있습니다.',
+  email: 'bos33210@naver.com',
   location: 'Seoul, Korea',
   stats: [
-    { value: '3+', label: 'Years of Experience' },
-    { value: '12+', label: 'Projects Shipped' },
-    { value: '20+', label: 'Tech Stacks' }
+    { value: '4+', label: 'Years of Experience' },
+    { value: '96%', label: 'Infra Cost Reduction' },
+    { value: '3x', label: 'Client Growth' }
   ],
   socials: [
-    { label: 'GitHub', href: 'https://github.com' },
-    { label: 'Blog', href: 'https://example.com' },
-    { label: 'LinkedIn', href: 'https://linkedin.com' }
+    { label: 'GitHub', href: 'https://github.com/big-choi' },
+    { label: 'Email', href: 'mailto:bos33210@naver.com' }
   ]
 };
 
 export const about: AboutContent = {
   paragraphs: [
-    '안녕하세요. 사용자 경험을 최우선으로 생각하는 프론트엔드 개발자 홍길동입니다.',
-    '재사용 가능한 컴포넌트 설계, 협업을 고려한 코드 구조화, 성능 최적화에 관심이 많습니다. 작은 디테일이 제품의 완성도를 만든다고 믿으며, 꾸준한 학습으로 더 나은 경험을 만들어 갑니다.'
+    '안녕하세요. 사용자 경험과 개발 효율을 함께 개선하는 프론트엔드 개발자 최보성입니다.',
+    '요청받은 기능을 구현하는 데서 멈추지 않고, 왜 이 기능이 필요한지, 어떤 사용자 흐름에서 사용되는지, 운영 과정에서 어떤 문제가 생길 수 있는지를 함께 고려합니다. 환경 변수, 배포 방식, API 연동 등을 문서화하여 팀이 더 빠르고 안정적으로 개발할 수 있는 기반을 만드는 데 집중합니다.'
   ],
   highlights: [
     {
-      title: 'Component-Driven UI',
-      description: '재사용성과 접근성을 고려한 컴포넌트 시스템을 설계하고 디자인 시스템을 구축합니다.',
-      keywords: ['Design System', 'Accessibility', 'Reusability']
+      title: 'Cost & Infra Optimization',
+      description:
+        '서비스 규모에 맞는 인프라를 판단하고, Firebase 마이그레이션으로 월 운영 비용을 약 96% 절감했습니다.',
+      keywords: ['Firebase', 'Migration', 'Cost Saving']
     },
     {
-      title: 'Performance Optimization',
-      description: '렌더링 최적화, 코드 스플리팅, 캐싱 전략으로 빠르고 가벼운 웹을 만듭니다.',
-      keywords: ['Rendering', 'Caching', 'Core Web Vitals']
+      title: 'Productivity & Structure',
+      description: '디자인 시스템 구축과 공통 컴포넌트화로 UI 파편화를 해결하고 신규 구축 리소스를 약 50% 줄였습니다.',
+      keywords: ['Design System', 'Reusability', 'Refactoring']
     },
     {
-      title: 'Collaboration',
-      description: '명확한 코드 리뷰와 문서화로 팀과 함께 성장하는 개발 문화를 지향합니다.',
-      keywords: ['Code Review', 'Documentation', 'Communication']
+      title: 'Product & UX Thinking',
+      description:
+        '와이어프레임과 UI 정의서를 직접 설계하고, 화면별 사용자 플로우를 정리해 개발까지 연결했습니다.',
+      keywords: ['Wireframe', 'User Flow', 'UI Spec']
     }
   ]
 };

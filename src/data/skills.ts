@@ -6,7 +6,7 @@ export const skillCategories: SkillCategory[] = [
     label: 'Language',
     items: [
       { name: 'TypeScript', description: '타입을 활용한 안전하고 명확한 코드를 작성합니다.' },
-      { name: 'JavaScript', description: 'ES6+ 문법을 능숙하게 활용합니다.' },
+      { name: 'JavaScript', description: 'ES6+ 문법으로 사용자 화면 기능을 구현합니다.' },
       { name: 'HTML/CSS', description: '시맨틱 마크업과 반응형 레이아웃을 구현합니다.' }
     ]
   },
@@ -14,29 +14,36 @@ export const skillCategories: SkillCategory[] = [
     id: 'frontend',
     label: 'Frontend',
     items: [
-      { name: 'React', description: 'Hooks, Context, Suspense를 활용한 컴포넌트 설계가 가능합니다.' },
-      { name: 'Next.js', description: 'App Router와 SSR/SSG/CSR을 상황에 맞게 활용합니다.' },
+      { name: 'React', description: '인증, 관리자, 검수 CMS 등 다양한 웹 서비스를 개발했습니다.' },
+      { name: 'Next.js', description: 'React 기반의 프로덕션 웹 애플리케이션을 구성합니다.' },
+      { name: 'Redux', description: '복잡한 클라이언트 상태를 예측 가능하게 관리합니다.' },
       { name: 'TanStack Query', description: '서버 상태 관리와 캐싱 전략을 적용합니다.' },
-      { name: 'Zustand', description: '가볍고 직관적인 전역 상태 관리를 구성합니다.' },
-      { name: 'Tailwind CSS', description: '유틸리티 기반의 빠른 스타일링을 선호합니다.' }
+      { name: 'Tailwind CSS', description: '디자인 시스템과 함께 일관된 스타일링을 구현합니다.' },
+      { name: 'jQuery', description: '레거시 웹 화면의 기능 개발 및 유지보수 경험이 있습니다.' },
+      { name: 'Vue.js', description: '사내 관리자 페이지를 신규 개발했습니다.' },
+      { name: 'WebGL', description: '브라우저에서 수어 애니메이션을 재생하는 플레이어를 다뤘습니다.' }
     ]
   },
   {
-    id: 'tooling',
-    label: 'Tooling',
+    id: 'backend',
+    label: 'Backend & Infra',
     items: [
-      { name: 'Vite', description: '빠른 개발 환경을 위한 번들러로 사용합니다.' },
-      { name: 'Jest / RTL', description: '컴포넌트 단위 테스트를 작성합니다.' },
-      { name: 'Playwright', description: 'E2E 테스트로 사용자 시나리오를 검증합니다.' }
+      { name: 'Node.js', description: '서비스 백엔드와 사전 체험 페이지를 개발했습니다.' },
+      { name: 'Express', description: 'REST API 서버를 구성하고 운영합니다.' },
+      { name: 'Firebase', description: '인증, Hosting, 인프라 전환으로 운영 비용을 최적화했습니다.' },
+      { name: 'MongoDB', description: 'NCP 기반 NoSQL 데이터베이스를 설계·운영했습니다.' },
+      { name: 'Spring Boot', description: 'API Server 개발·유지보수 경험이 있습니다.' },
+      { name: 'REST API', description: '프론트엔드와 백엔드 간 API 연동 구조를 설계합니다.' }
     ]
   },
   {
     id: 'etc',
     label: 'ETC',
     items: [
-      { name: 'Git / GitHub', description: '버전 관리와 협업 워크플로우에 익숙합니다.' },
-      { name: 'Vercel', description: 'Next.js 프로젝트 배포에 활용합니다.' },
-      { name: 'Figma', description: '디자이너와 협업하며 디자인을 구현합니다.' }
+      { name: 'Git', description: '버전 관리와 협업 워크플로우에 익숙합니다.' },
+      { name: 'GitHub Actions', description: 'CI/CD 파이프라인으로 배포 프로세스를 효율화합니다.' },
+      { name: 'Linux/Tomcat', description: '운영 환경에서 서비스 배포와 장애 대응을 수행했습니다.' },
+      { name: 'GA / PostHog', description: '사용자 유입 분석과 A/B 테스트 기반을 마련합니다.' }
     ]
   }
 ];

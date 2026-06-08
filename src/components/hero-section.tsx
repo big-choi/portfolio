@@ -1,6 +1,5 @@
 import { profile } from '@/data/profile';
 import { Reveal } from '@/components/ui/reveal';
-import { StatCard } from '@/components/ui/stat-card';
 
 export function HeroSection() {
   return (
@@ -27,14 +26,6 @@ export function HeroSection() {
           >
             View projects
           </a>
-        </div>
-      </Reveal>
-
-      <Reveal delay={220} className="mt-14">
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-          {profile.stats.map((stat) => (
-            <StatCard key={stat.label} stat={stat} />
-          ))}
         </div>
       </Reveal>
     </section>

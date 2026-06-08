@@ -23,19 +23,21 @@ export function ProjectCard({ project }: ProjectCardProps) {
         ))}
       </div>
 
-      <div className="mt-5 flex flex-wrap gap-4 border-t border-border pt-4">
-        {project.links.map((link) => (
-          <a
-            key={link.label}
-            href={link.href}
-            target="_blank"
-            rel="noreferrer"
-            className="text-sm font-medium text-muted transition-colors hover:text-accent"
-          >
-            {link.label} →
-          </a>
-        ))}
-      </div>
+      {project.links.length > 0 ? (
+        <div className="mt-5 flex flex-wrap gap-4 border-t border-border pt-4">
+          {project.links.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm font-medium text-muted transition-colors hover:text-accent"
+            >
+              {link.label} →
+            </a>
+          ))}
+        </div>
+      ) : null}
     </article>
   );
 }

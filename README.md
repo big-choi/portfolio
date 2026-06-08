@@ -14,25 +14,25 @@ npm run dev
 
 ## 스크립트
 
-| 명령              | 설명                       |
-| ----------------- | -------------------------- |
-| `npm run dev`     | 개발 서버 실행             |
-| `npm run build`   | 프로덕션 빌드              |
-| `npm run start`   | 빌드 결과 실행             |
-| `npm run lint`    | ESLint 검사                |
-| `npm run format`  | Prettier 포맷팅            |
+| 명령             | 설명            |
+| ---------------- | --------------- |
+| `npm run dev`    | 개발 서버 실행  |
+| `npm run build`  | 프로덕션 빌드   |
+| `npm run start`  | 빌드 결과 실행  |
+| `npm run lint`   | ESLint 검사     |
+| `npm run format` | Prettier 포맷팅 |
 
 ## 콘텐츠 수정 방법
 
 모든 텍스트/이력/프로젝트 데이터는 `src/data/` 폴더에 분리되어 있습니다. UI 컴포넌트를 건드리지 않고 아래 파일만 수정하면 내용이 반영됩니다.
 
-| 파일                      | 수정 내용                                         |
-| ------------------------- | ------------------------------------------------- |
-| `src/data/profile.ts`     | 이름, 직함, 소개 문구, 상단 통계, 연락처, 소셜 링크 |
-| `src/data/experience.ts`  | 경력 타임라인 (회사/기간/역할/성과/스택)           |
-| `src/data/projects.ts`    | 프로젝트 카드 (제목/기간/설명/스택/링크/featured)   |
-| `src/data/skills.ts`      | 스킬 카테고리 탭과 각 스킬 설명                    |
-| `src/data/navigation.ts`  | 상단 네비게이션 메뉴 항목                          |
+| 파일                     | 수정 내용                                           |
+| ------------------------ | --------------------------------------------------- |
+| `src/data/profile.ts`    | 이름, 직함, 소개 문구, 상단 통계, 연락처, 소셜 링크 |
+| `src/data/experience.ts` | 경력 타임라인 (회사/기간/역할/성과/스택)            |
+| `src/data/projects.ts`   | 프로젝트 카드 (제목/기간/설명/스택/링크/featured)   |
+| `src/data/skills.ts`     | 스킬 카테고리 탭과 각 스킬 설명                     |
+| `src/data/navigation.ts` | 상단 네비게이션 메뉴 항목                           |
 
 각 데이터의 타입은 `src/lib/types.ts` 에 정의되어 있어, 필드를 추가하거나 바꿀 때 타입을 함께 참고하면 됩니다.
 
