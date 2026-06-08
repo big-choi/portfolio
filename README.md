@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio
 
-## Getting Started
+Next.js(App Router) + TypeScript + Tailwind CSS 기반의 프론트엔드 포트폴리오 초안입니다.
+깔끔하고 심플한 다크 톤 UI에 Hero(통계) → About → Experience(타임라인) → Projects(카드) → Skills(탭) → Contact 구성을 담았습니다.
 
-First, run the development server:
+## 시작하기
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[http://localhost:3000](http://localhost:3000) 에서 확인할 수 있습니다.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 스크립트
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| 명령              | 설명                       |
+| ----------------- | -------------------------- |
+| `npm run dev`     | 개발 서버 실행             |
+| `npm run build`   | 프로덕션 빌드              |
+| `npm run start`   | 빌드 결과 실행             |
+| `npm run lint`    | ESLint 검사                |
+| `npm run format`  | Prettier 포맷팅            |
 
-## Learn More
+## 콘텐츠 수정 방법
 
-To learn more about Next.js, take a look at the following resources:
+모든 텍스트/이력/프로젝트 데이터는 `src/data/` 폴더에 분리되어 있습니다. UI 컴포넌트를 건드리지 않고 아래 파일만 수정하면 내용이 반영됩니다.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| 파일                      | 수정 내용                                         |
+| ------------------------- | ------------------------------------------------- |
+| `src/data/profile.ts`     | 이름, 직함, 소개 문구, 상단 통계, 연락처, 소셜 링크 |
+| `src/data/experience.ts`  | 경력 타임라인 (회사/기간/역할/성과/스택)           |
+| `src/data/projects.ts`    | 프로젝트 카드 (제목/기간/설명/스택/링크/featured)   |
+| `src/data/skills.ts`      | 스킬 카테고리 탭과 각 스킬 설명                    |
+| `src/data/navigation.ts`  | 상단 네비게이션 메뉴 항목                          |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+각 데이터의 타입은 `src/lib/types.ts` 에 정의되어 있어, 필드를 추가하거나 바꿀 때 타입을 함께 참고하면 됩니다.
 
-## Deploy on Vercel
+## 테마 색상
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+다크 톤과 accent 컬러는 `src/app/globals.css` 상단의 CSS 변수(`--background`, `--accent` 등)에서 한 번에 변경할 수 있습니다.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 폴더 구조
+
+```
+src/
+├── app/                 # 레이아웃, 페이지, 전역 스타일
+├── components/          # 섹션 컴포넌트
+│   └── ui/              # 재사용 UI (heading, tag, card, reveal)
+├── data/                # 콘텐츠 데이터 (여기만 수정)
+└── lib/                 # 타입 정의
+```
+
+## 배포
+
+[Vercel](https://vercel.com) 에 그대로 연결하면 바로 배포됩니다.
