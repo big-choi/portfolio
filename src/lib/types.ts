@@ -46,12 +46,16 @@ export interface ExperienceItem {
 }
 
 export interface Project {
+  slug: string;
   title: string;
+  company?: string;
   period: string;
   description: string;
+  overview: string;
+  responsibilities: string[];
+  achievements: string[];
   stack: string[];
   links: { label: string; href: string }[];
-  featured: boolean;
 }
 
 export interface SkillItem {

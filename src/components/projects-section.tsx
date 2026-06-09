@@ -7,7 +7,11 @@ export function ProjectsSection() {
   return (
     <section id="projects" className="mx-auto max-w-5xl px-6 py-20 sm:py-24">
       <Reveal>
-        <SectionHeading index="03" title="Projects" description="대표적인 작업물들을 모았습니다." />
+        <SectionHeading
+          index="03"
+          title="Projects"
+          description="카드를 클릭해 주요 프로젝트의 세부사항을 확인해보세요."
+        />
       </Reveal>
 
       <div className="grid gap-5 sm:grid-cols-2">
