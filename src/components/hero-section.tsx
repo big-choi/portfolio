@@ -11,23 +11,6 @@ export function HeroSection() {
         <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">{profile.tagline}</p>
         <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted">{profile.intro}</p>
       </Reveal>
-
-      <Reveal delay={120} className="mt-10">
-        <div className="flex flex-wrap items-center gap-3">
-          <a
-            href="#contact"
-            className="rounded-full bg-accent px-6 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90"
-          >
-            Get in touch
-          </a>
-          <a
-            href="#projects"
-            className="rounded-full border border-border px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-surface"
-          >
-            View projects
-          </a>
-        </div>
-      </Reveal>
     </section>
   );
 }
