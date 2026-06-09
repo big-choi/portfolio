@@ -5,7 +5,7 @@ export const profile: Profile = {
   role: 'Frontend Developer',
   tagline: '화면 구현을 넘어 사용자 흐름, 운영 구조, 개발 생산성까지 고려하는 4년차 프론트엔드 개발자입니다.',
   intro:
-    'React와 TypeScript를 주력으로 사용자 인터페이스를 만드는 프론트엔드 개발자입니다. 컴포넌트 설계와 렌더링 최적화, 상태 관리, 협업을 고려한 코드 구조화에 관심이 많으며, 더 나은 사용자 경험을 만드는 데 집중하고 있습니다.',
+    'React와 TypeScript를 주력으로 사용자 인터페이스를 만듭니다. 컴포넌트 설계와 렌더링 최적화, 상태 관리, 협업을 고려한 코드 구조화에 관심이 많으며, 더 나은 사용자 경험을 만드는 데 집중하고 있습니다.',
   email: 'bos33210@naver.com',
   location: 'Seoul, Korea',
   stats: [
@@ -22,7 +22,8 @@ export const profile: Profile = {
 export const about: AboutContent = {
   paragraphs: [
     '안녕하세요. 사용자 경험과 개발 효율을 함께 개선하는 프론트엔드 개발자 최보성입니다.',
-    '요청받은 기능을 구현하는 데서 멈추지 않고, 왜 이 기능이 필요한지, 어떤 사용자 흐름에서 사용되는지, 운영 과정에서 어떤 문제가 생길 수 있는지를 함께 고려합니다. 환경 변수, 배포 방식, API 연동 등을 문서화하여 팀이 더 빠르고 안정적으로 개발할 수 있는 기반을 만드는 데 집중합니다.'
+    '기능을 구현하는 데서 멈추지 않고, 왜 이 기능이 필요한지, 어떤 사용자 흐름에서 사용되는지, 운영 과정에서 어떤 문제가 생길 수 있는지를 함께 고려합니다.',
+    '프론트엔드 개발자로서 전문성을 확장해 나가면서도, 조직과 함께 성장하는 개발자가 되고자 합니다.'
   ],
   highlights: [
     {
@@ -38,8 +39,7 @@ export const about: AboutContent = {
     },
     {
       title: 'Product & UX Thinking',
-      description:
-        '와이어프레임과 UI 정의서를 직접 설계하고, 화면별 사용자 플로우를 정리해 개발까지 연결했습니다.',
+      description: '와이어프레임과 UI 정의서를 직접 설계하고, 화면별 사용자 플로우를 정리해 개발까지 연결했습니다.',
       keywords: ['Wireframe', 'User Flow', 'UI Spec']
     }
   ]
