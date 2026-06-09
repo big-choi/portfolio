@@ -14,7 +14,7 @@ export function ExperienceSection() {
         {experiences.map((item, idx) => (
           <Reveal key={`${item.company}-${item.period}`} delay={idx * 80}>
             <li className="relative">
-              <span className="absolute top-1.5 -left-[1.6rem] h-3 w-3 rounded-full border-2 border-accent bg-background sm:-left-[2.1rem]" />
+              <span className="absolute top-1.5 -left-[1.875rem] h-3 w-3 rounded-full border-2 border-accent bg-background sm:-left-[2.375rem]" />
               <p className="font-mono text-xs text-accent">{item.period}</p>
               <h3 className="mt-2 text-lg font-semibold text-foreground">
                 {item.role}
