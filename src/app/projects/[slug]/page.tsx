@@ -41,9 +41,22 @@ export default async function ProjectDetailPage({ params }: ProjectDetailProps) 
       <main className="mx-auto w-full max-w-3xl flex-1 px-6 py-16 sm:py-20">
         <Link
           href="/#projects"
-          className="inline-flex items-center gap-1 text-sm font-medium text-muted transition-colors hover:text-accent"
+          className="group inline-flex items-center gap-1.5 text-sm font-medium text-muted transition-colors hover:text-accent"
         >
-          <span aria-hidden="true">←</span> Projects
+          <svg
+            aria-hidden="true"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="size-4 transition-transform group-hover:-translate-x-0.5"
+          >
+            <path d="M19 12H5" />
+            <path d="m12 19-7-7 7-7" />
+          </svg>
+          Projects
         </Link>
 
         <header className="mt-8">
@@ -68,8 +81,12 @@ export default async function ProjectDetailPage({ params }: ProjectDetailProps) 
           <h2 className="text-xl font-semibold text-foreground">역할</h2>
           <ul className="mt-4 flex flex-col gap-2">
             {project.responsibilities.map((item) => (
-              <li key={item} className="flex gap-2 text-base leading-relaxed text-muted">
-                <span className="mt-1 text-accent">▹</span>
+              <li key={item} className="flex gap-2.5 text-base leading-relaxed text-muted">
+                <span className="flex h-[1lh] shrink-0 items-center text-accent" aria-hidden="true">
+                  <svg viewBox="0 0 8 8" className="size-2 fill-current">
+                    <path d="M2 0 6 4 2 8Z" />
+                  </svg>
+                </span>
                 <span>{item}</span>
               </li>
             ))}
@@ -80,16 +97,20 @@ export default async function ProjectDetailPage({ params }: ProjectDetailProps) 
           <h2 className="text-xl font-semibold text-foreground">성과</h2>
           <ul className="mt-4 flex flex-col gap-2">
             {project.achievements.map((item) => (
-              <li key={item} className="flex gap-2 text-base leading-relaxed text-muted">
-                <span className="mt-1 text-accent">▹</span>
+              <li key={item} className="flex gap-2.5 text-base leading-relaxed text-muted">
+                <span className="flex h-[1lh] shrink-0 items-center text-accent" aria-hidden="true">
+                  <svg viewBox="0 0 8 8" className="size-2 fill-current">
+                    <path d="M2 0 6 4 2 8Z" />
+                  </svg>
+                </span>
                 <span>{item}</span>
               </li>
             ))}
           </ul>
         </section>
 
-        {project.links.length > 0 ? (
-          <section className="mt-10 flex flex-wrap gap-4 border-t border-border pt-6">
+        {project.links.length > 0 || project.access === 'private' ? (
+          <section className="mt-10 flex flex-wrap items-center gap-4 border-t border-border pt-6">
             {project.links.map((link) => (
               <a
                 key={link.label}
@@ -101,6 +122,24 @@ export default async function ProjectDetailPage({ params }: ProjectDetailProps) 
                 {link.label} →
               </a>
             ))}
+            {project.links.length === 0 && project.access === 'private' ? (
+              <span className="inline-flex items-center gap-1.5 rounded-full border border-border px-3 py-1 text-sm text-muted">
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="size-3.5"
+                >
+                  <rect x="3" y="11" width="18" height="11" rx="2" />
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                </svg>
+                사내 솔루션 · 비공개
+              </span>
+            ) : null}
           </section>
         ) : null}
       </main>

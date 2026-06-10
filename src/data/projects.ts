@@ -10,21 +10,24 @@ export const projects: Project[] = [
     overview:
       'AI를 활용해 어려운 문장을 쉬운 글로 변환하는 B2B SaaS입니다. AI가 생성한 변환문을 내부 검수자가 판별·수정하는 검수 기능과 멀티 테넌트 기반 관리 기능을 제공합니다. PM 부재 상황에서 와이어프레임과 UI 정의서를 직접 설계해 개발까지 연결했습니다.',
     responsibilities: [
-      '와이어프레임, UI 정의서, 사용자 플로우 직접 설계',
+      '와이어프레임, UI 정의서, 사용자 플로우 설계·개발',
       'SSE를 활용한 AI 변환문 스트리밍 기능 개발',
+      'TanStack Query를 활용한 서버 상태 관리 및 캐싱 전략 적용',
       '검수 상태 관리·검수자 배정 등 검수 CMS 프론트엔드 개발',
-      '멀티 테넌트 기반 관리자/사용자/검수자 권한별 화면 흐름 설계',
+      '멀티 테넌트 기반 관리자/사용자/검수자 권한별 화면 흐름 개발',
       '사전 체험(Free Trial) 페이지 프론트엔드 및 백엔드 개발',
-      'GA, PostHog 연동을 통한 사용자 유입 분석 및 A/B 테스트 기반 마련'
+      'GA, PostHog 연동을 통한 사용자 유입 분석 및 개별 사용자 행동 분석'
     ],
     achievements: [
+      'React Testing Library를 활용한 테스트 코드 작성으로 유지보수성 개선',
       '디자인 시스템 구축으로 디자이너·개발자 간 UI 파편화 해결 및 중복 코드 제거',
       '테넌트별 통계 메뉴를 단일 통계 허브로 통합하여 중복 화면 최대 75% 축소',
       '대시보드 기준 초기 LCP 3~4초대 대비 약 45% 개선',
-      'PM 부재 상황에서 설계를 직접 담당했음에도 due date 지연 없이 개발 완료'
+      'UX 결함 수정과 온보딩 플로우 개선으로 도입 문의 수요 28% 증가'
     ],
-    stack: ['React', 'TypeScript', 'Tailwind CSS', 'TanStack Query', 'Node.js', 'Express', 'Firebase', 'GA', 'PostHog'],
-    links: []
+    stack: ['React', 'TypeScript', 'Tailwind CSS', 'TanStack Query', 'React Testing Library', 'shadcn/ui'],
+    links: [],
+    access: 'private'
   },
   {
     slug: 'signery',
@@ -48,7 +51,8 @@ export const projects: Project[] = [
       '데이터 수집·통계 기능 개발로 데이터 기반의 콘텐츠 서비스 개선 기반 마련'
     ],
     stack: ['React', 'TypeScript', 'Node.js', 'Firebase', 'Firebase Hosting', 'Kubernetes', 'MongoDB'],
-    links: []
+    links: [{ label: 'Live', href: 'https://signery.eq4all.co.kr' }],
+    access: 'public'
   },
   {
     slug: 'webgl-sign-player',
@@ -72,7 +76,8 @@ export const projects: Project[] = [
       '인터페이스 중복 코드 제거 및 조건문 정리로 유지보수성 개선'
     ],
     stack: ['JavaScript', 'React', 'WebGL', 'CSS'],
-    links: []
+    links: [],
+    access: 'private'
   },
   {
     slug: 'e-questionnaire',
@@ -97,7 +102,8 @@ export const projects: Project[] = [
       '불만·사후지원 리소스 약 50% 감소 및 솔루션 흑자 전환에 기여'
     ],
     stack: ['JavaScript', 'jQuery', 'Vue.js', 'Spring Boot', 'Java/JSP', 'Linux/Tomcat', 'GitHub Actions'],
-    links: []
+    links: [],
+    access: 'private'
   }
 ];
 

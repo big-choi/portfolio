@@ -56,6 +56,7 @@ export interface Project {
   achievements: string[];
   stack: string[];
   links: { label: string; href: string }[];
+  access?: 'public' | 'private';
 }
 
 export interface SkillItem {
