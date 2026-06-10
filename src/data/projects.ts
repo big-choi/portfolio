@@ -1,5 +1,4 @@
 import { Project } from '@/lib/types';
-import { onguelTroubleshooting } from '@/data/troubleshooting';
 
 export const projects: Project[] = [
   {
@@ -28,8 +27,7 @@ export const projects: Project[] = [
     ],
     stack: ['React', 'TypeScript', 'Tailwind CSS', 'TanStack Query', 'React Testing Library', 'shadcn/ui'],
     links: [],
-    access: 'private',
-    troubleshooting: onguelTroubleshooting
+    access: 'private'
   },
   {
     slug: 'signery',

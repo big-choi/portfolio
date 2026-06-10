@@ -6,6 +6,7 @@ import { profile } from '@/data/profile';
 import { SiteFooter } from '@/components/site-footer';
 import { Markdown } from '@/components/ui/markdown';
 import { Tag } from '@/components/ui/tag';
+import { getTroubleshooting } from '@/lib/troubleshooting';
 
 interface ProjectDetailProps {
   params: Promise<{ slug: string }>;
@@ -36,6 +37,8 @@ export default async function ProjectDetailPage({ params }: ProjectDetailProps) 
   if (!project) {
     notFound();
   }
+
+  const troubleshooting = getTroubleshooting(project.slug);
 
   return (
     <>
@@ -110,14 +113,13 @@ export default async function ProjectDetailPage({ params }: ProjectDetailProps) 
           </ul>
         </section>
 
-        {project.troubleshooting && project.troubleshooting.length > 0 ? (
+        {troubleshooting.length > 0 ? (
           <section className="mt-10">
             <h2 className="text-xl font-semibold text-foreground">트러블슈팅</h2>
             <div className="mt-4 flex flex-col gap-3">
-              {project.troubleshooting.map((item, index) => (
+              {troubleshooting.map((item) => (
                 <details
                   key={item.title}
-                  open={index === 0}
                   className="group rounded-xl border border-border bg-surface/40 px-5 py-4 transition-colors open:bg-surface/60"
                 >
                   <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-base font-medium text-foreground [&::-webkit-details-marker]:hidden">

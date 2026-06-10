@@ -62,7 +62,6 @@ export interface Project {
   stack: string[];
   links: { label: string; href: string }[];
   access?: 'public' | 'private';
-  troubleshooting?: TroubleshootingCase[];
 }
 
 export interface SkillItem {
