@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { getProjectBySlug, projects } from '@/data/projects';
 import { profile } from '@/data/profile';
 import { SiteFooter } from '@/components/site-footer';
+import { Markdown } from '@/components/ui/markdown';
 import { Tag } from '@/components/ui/tag';
 
 interface ProjectDetailProps {
@@ -108,6 +109,40 @@ export default async function ProjectDetailPage({ params }: ProjectDetailProps) 
             ))}
           </ul>
         </section>
+
+        {project.troubleshooting && project.troubleshooting.length > 0 ? (
+          <section className="mt-10">
+            <h2 className="text-xl font-semibold text-foreground">트러블슈팅</h2>
+            <div className="mt-4 flex flex-col gap-3">
+              {project.troubleshooting.map((item, index) => (
+                <details
+                  key={item.title}
+                  open={index === 0}
+                  className="group rounded-xl border border-border bg-surface/40 px-5 py-4 transition-colors open:bg-surface/60"
+                >
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-base font-medium text-foreground [&::-webkit-details-marker]:hidden">
+                    <span>{item.title}</span>
+                    <svg
+                      aria-hidden="true"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="size-4 shrink-0 text-muted transition-transform group-open:rotate-180"
+                    >
+                      <path d="m6 9 6 6 6-6" />
+                    </svg>
+                  </summary>
+                  <div className="mt-3 border-t border-border pt-3">
+                    <Markdown>{item.body}</Markdown>
+                  </div>
+                </details>
+              ))}
+            </div>
+          </section>
+        ) : null}
 
         {project.links.length > 0 || project.access === 'private' ? (
           <section className="mt-10 flex flex-wrap items-center gap-4 border-t border-border pt-6">

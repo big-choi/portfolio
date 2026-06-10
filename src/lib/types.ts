@@ -45,6 +45,11 @@ export interface ExperienceItem {
   stack: string[];
 }
 
+export interface TroubleshootingCase {
+  title: string;
+  body: string;
+}
+
 export interface Project {
   slug: string;
   title: string;
@@ -57,6 +62,7 @@ export interface Project {
   stack: string[];
   links: { label: string; href: string }[];
   access?: 'public' | 'private';
+  troubleshooting?: TroubleshootingCase[];
 }
 
 export interface SkillItem {
