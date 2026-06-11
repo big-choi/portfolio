@@ -15,14 +15,14 @@ export const projects: Project[] = [
       'TanStack Query를 활용한 서버 상태 관리 및 캐싱 전략 적용',
       '검수 상태 관리·검수자 배정 등 검수 CMS 프론트엔드 개발',
       '멀티 테넌트 기반 관리자/사용자/검수자 권한별 화면 흐름 개발',
-      '사전 체험(Free Trial) 페이지 프론트엔드 및 백엔드 개발',
       'GA, PostHog 연동을 통한 사용자 유입 분석 및 개별 사용자 행동 분석'
     ],
     achievements: [
-      'React Testing Library를 활용한 테스트 코드 작성으로 유지보수성 개선',
-      '디자인 시스템 구축으로 디자이너·개발자 간 UI 파편화 해결 및 중복 코드 제거',
-      '테넌트별 통계 메뉴를 단일 통계 허브로 통합하여 중복 화면 최대 75% 축소',
-      '대시보드 기준 초기 LCP 3~4초대 대비 약 45% 개선',
+      '테넌트별로 분산된 통계 메뉴를 단일 통계 허브로 IA 재설계하고, 공통 레이아웃·테이블·필터 컴포넌트로 추상화하여 중복 화면 최대 75% 축소',
+      '코드 스플리팅, 이미지 최적화, 불필요한 리렌더링 제거를 적용해 대시보드 초기 LCP 3~4초대 → 약 45% 개선',
+      'React Query(서버 상태)와 Redux(전역 UI 상태)를 역할 분리해 캐싱·자동 리페치로 불필요한 API 호출을 줄이고 로딩/에러 처리를 표준화',
+      'React Testing Library 기반 테스트 코드 작성으로 핵심 검수 로직의 회귀 버그를 방지하고 유지보수성 개선',
+      '공통 UI를 디자인 시스템으로 표준화하여 디자이너·개발자 간 UI 파편화 및 중복 코드 제거',
       'UX 결함 수정과 온보딩 플로우 개선으로 도입 문의 수요 28% 증가'
     ],
     stack: ['React', 'TypeScript', 'Tailwind CSS', 'TanStack Query', 'React Testing Library', 'shadcn/ui'],
@@ -38,16 +38,16 @@ export const projects: Project[] = [
     overview:
       '수어 기반 이모티콘인 수어티콘을 검색·조회·다운로드·공유할 수 있는 웹 플랫폼입니다. 프론트엔드와 백엔드 구조를 설계하고 주요 기능을 개발했으며, 운영 비용 문제를 직접 진단해 인프라를 Firebase로 전환했습니다.',
     responsibilities: [
-      '수어티콘 검색·조회·다운로드·공유 웹 플랫폼의 프론트엔드 및 백엔드 구조 설계와 주요 기능 개발',
+      '프론트엔드·백엔드 설계 및 개발 (1인 풀스택 담당)',
       'NKS, NCP MongoDB 기반 초기 인프라 구성',
       '서비스 규모 대비 과도한 인프라 비용을 판단하여 Firebase 마이그레이션 추진',
       'Google·Apple·Kakao 소셜 로그인 및 로그인 상태 유지 기능 개발',
       '회원탈퇴, 정보 변경, 컬렉션 생성·삭제 등 사용자 계정 기능 개발',
-      'Firebase Hosting 기반 배포 구조 구성 및 문서화'
     ],
     achievements: [
-      'NKS/NCP MongoDB 인프라를 Firebase로 전환하여 월 운영비 약 90% 절감',
-      '크로스 브라우징 구현으로 공유·다운로드 등 이모티콘 상호작용 시 이탈율 감소',
+      '상시 가동형 NKS/NCP MongoDB 인프라를 Firebase(Firestore·Auth·Storage·Hosting) 서버리스 환경으로 전환, 유지 서버를 제거하고 사용량 기반 과금으로 바꿔 월 운영비 약 90% 절감',
+      'Firebase Authentication 기반 OAuth로 소셜 로그인(Google/Apple/Kakao)을 통합해 가입 진입 장벽 완화',
+      '크로스 브라우징 대응(브라우저별 다운로드, 공유 동작 표준화, 폴리필 적용)으로 이모티콘 상호작용 시 이탈률 감소',
       '데이터 수집·통계 기능 개발로 데이터 기반의 콘텐츠 서비스 개선 기반 마련'
     ],
     stack: ['React', 'TypeScript', 'Node.js', 'Firebase', 'Firebase Hosting', 'Kubernetes', 'MongoDB'],
@@ -70,10 +70,9 @@ export const projects: Project[] = [
       '중복 코드 제거, 조건문 정리 및 프로젝트 설정 정리'
     ],
     achievements: [
-      'submodule 기반 연동 구조를 공통 컴포넌트 구조로 전환',
-      'WebGL Player가 필요한 신규 데모 페이지 구축 리소스 약 50% 절감',
+      'submodule 의존을 제거하고 플레이어를 공통 컴포넌트로 패키징하여, WebGL Player가 필요한 신규 데모 페이지 구축 리소스 약 50% 절감',
       '테스트 페이지 일치화로 데모 검증 환경 표준화',
-      '인터페이스 중복 코드 제거 및 조건문 정리로 유지보수성 개선'
+      '인터페이스 중복 코드 제거·조건문 정리로 순환 복잡도를 낮춰 유지보수성 개선'
     ],
     stack: ['JavaScript', 'React', 'WebGL', 'CSS'],
     links: [],
