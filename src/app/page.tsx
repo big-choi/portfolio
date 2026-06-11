@@ -6,10 +6,12 @@ import { ProjectsSection } from '@/components/projects-section';
 import { SkillsSection } from '@/components/skills-section';
 import { ContactSection } from '@/components/contact-section';
 import { SiteFooter } from '@/components/site-footer';
+import { HashScroll } from '@/components/ui/hash-scroll';
 
 export default function Home() {
   return (
     <>
+      <HashScroll />
       <SiteHeader />
       <main className="flex-1">
         <HeroSection />
